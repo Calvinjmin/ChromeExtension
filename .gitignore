@@ -1,2 +1,5 @@
 # IntelliJ Files
 .idea/
+
+# DS Store Files
+.DS_Store
