@@ -6,6 +6,8 @@
 </head>
 <body>
     <h1>Timer Extension</h1>
+
+    <!-- Select Menu (Timer Duration) -->
     <select name="timerValue" id="timer-value">
         <option value="">--Please choose an option--</option>
         <option value="10m">10 Minutes</option>
@@ -14,10 +16,17 @@
         <option value="1h">1 Hour</option>
     </select>
     <br>
+
+    <!-- Current Time -->
     <p id="time"></p>
+
+    <!-- Timer Countdown -->
     <p id="countdown"></p>
+
+    <!-- Timer Buttons -->
     <button id="startTimer">Start</button>
-    <button>Stop</button>
+    <button id="stopTimer">Stop</button>
+
     <br><button id="showTime">Show Time</button>
     <script src="timer.js"></script>
 </body>
