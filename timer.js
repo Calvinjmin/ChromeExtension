@@ -14,6 +14,29 @@ let selectedTime = [];
 let intervalID = 0;
 let timeRemaining = 0;
 
+function logStorage() {
+    if(chrome.storage) {
+        chrome.storage.local.get(function(data){
+            console.log("chrome.storage.local:");
+            if(chrome.runtime.lastError) {
+                console.error(chrome.runtime.lastError);
+            } else {
+                console.log(data);
+            }
+            chrome.storage.sync.get(function(data){
+                console.log("chrome.storage.sync:");
+                if(chrome.runtime.lastError) {
+                    console.error(chrome.runtime.lastError);
+                } else {
+                    console.log(data);
+                }
+            });
+        });
+    } else {
+        console.warn("chrome.storage is not accessible, check permissions");
+    }
+}
+
 // Initialize Timer Countdown
 function startTimer() {
     //Select Element
@@ -40,11 +63,11 @@ function startTimer() {
 // Stop Countdown
 function stopTimer() {
     alert("Stopped Timer");
+    logStorage();
     clearInterval(intervalID);
 }
 
-
-
+// Show Time Function
 function showTime() {
     let date = new Date();
     let amOrPm = "AM";
