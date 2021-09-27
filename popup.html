@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 <head>
     <meta charset="UTF-8">
     <title>Calvin's Browser Extension</title>
 </head>
 <body>
-    <h1>Timer Extension</h1>
+    <h1 class="text-center">Timer Extension</h1>
 
     <!-- Select Menu (Timer Duration) -->
-    <select name="timerValue" id="timer-value">
+    <select name="timerValue" id="timer-value" class="form-select">
         <option value="">--Please choose an option--</option>
         <option value="10m">10 Minutes</option>
         <option value="20m">20 Minutes</option>
@@ -24,10 +26,10 @@
     <p id="countdown"></p>
 
     <!-- Timer Buttons -->
-    <button id="startTimer">Start</button>
-    <button id="stopTimer">Stop</button>
+    <button id="startTimer" class="btn btn-success text-center">Start</button>
+    <button id="stopTimer" class="btn btn-danger text-center">Stop</button>
 
-    <br><button id="showTime">Show Time</button>
+    <br><button id="showTime" class="btn btn-info text-center">Show Time</button>
     <script src="timer.js"></script>
 </body>
 </html>
